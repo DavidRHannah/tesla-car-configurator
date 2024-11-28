@@ -151,26 +151,20 @@ const updateEstimatedPaymentBreakdown = () => {
     // Get and parse the down payment
     const downPaymentText = downPaymentElement.textContent || "0";
     const downPayment = parseFloat(downPaymentText.replace(/[^0-9.-]/g, ""));
-    console.log("Down Payment:", downPayment);
 
     // Get and parse the loan term
     const loanTermText = loanTermElement.textContent || "0";
     const loanTerm = parseInt(loanTermText.replace(/[^0-9]/g, ""), 10);
-    console.log("Loan Term:", loanTerm);
 
     // Get and parse the interest rate
     const interestRateText = interestRateElement.textContent || "0";
     const interestRate = parseFloat(interestRateText.replace(/[^0-9.-]/g, "")) / 100;
-    console.log("Interest Rate:", interestRate);
 
     const loanAmount = totalPrice - downPayment;
-    console.log("Loan Amount:", loanAmount);
 
     const monthlyRate = interestRate / 12;
     const monthlyPayment = loanAmount * (monthlyRate * (1 + monthlyRate) ** loanTerm) / ((1 + monthlyRate) ** loanTerm - 1);
     
-    console.log("Estimated Monthly Payment:", monthlyPayment.toFixed(2));
-
     monthlyPaymentElement.textContent = `$${monthlyPayment.toFixed(2)}`;
 };
 
