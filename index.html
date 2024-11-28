@@ -44,7 +44,7 @@
             <h2 class="text-xl text-center font-light">Customize Your Car</h2>
 
             <!-- Exterior Buttons -->
-             <div class="my-8" id="exterior-buttons">
+            <div class="my-8" id="exterior-buttons">
                 <h3 class="font-semibold mb-2">Exterior Colors</h3>
                 <div class="flex space-x-4">
                     <button class="btn-selected transition-transform duration-300 hover:scale-110">
@@ -66,10 +66,10 @@
                         <img src="./images/button-quicksilver.avif" alt="Quicksilver" class="w-22">
                     </button>
                 </div>
-             </div>
-            
-             <!-- Interior Buttons -->
-              <div class="my-8" id="interior-buttons">
+            </div>
+        
+            <!-- Interior Buttons -->
+            <div class="my-8" id="interior-buttons">
                 <h3 class="font-semibold mb-2">Interior Colors</h3>
                 <div class="flex space-x-4">
                     <button class="btn-selected transition-transform duration-300 hover:scale-110">
@@ -79,10 +79,10 @@
                         <img src="./images/button-light.avif" alt="Light" class="w-12">
                     </button>
                 </div>
-              </div>
+            </div>
 
-              <!-- Wheel Buttons -->
-               <div class="mb-8" id="wheel-buttons">
+            <!-- Wheel Buttons -->
+            <div class="mb-8" id="wheel-buttons">
                 <h3 class="font-semibold mb-2">Wheels</h3>
                 <button class="w-full py-4 mb-2 bg-gray-700 hover:bg-gray-600 hover:text-white text-white rounded-lg transition-colors duration-300">
                     Standard Wheels
@@ -90,64 +90,67 @@
                 <button class="w-full py-4 mb-2 bg-gray-200 hover:bg-gray-600 hover:text-white rounded-lg transition-colors duration-300">
                     Performance Wheels (+$2,500)
                 </button>
-               </div>
+            </div>
                
-               <!-- Full Self Driving Option  -->
-                <div class="border p-4 mb-8 rounded-lg shadow">
-                    <h3 class="font-semibold mb-2">Full Self-Driving</h3>
-                    <label class="flex items-center space-x-3">
-                        <input type="checkbox" id="full-self-driving-checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
-                        <span>Add Full Self-Driving for $8,500</span>
-                    </label>
-                </div>
+            <!-- Full Self Driving Option  -->
+            <div class="border p-4 mb-8 rounded-lg shadow">
+                <h3 class="font-semibold mb-2">Full Self-Driving</h3>
+                <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="full-self-driving-checkbox" autocomplete="off" class="form-checkbox h-5 w-5 text-blue-600" />
+                    <span>Add Full Self-Driving for $8,500</span>
+                </label>
+            </div>
 
-                <!-- Performance Upgrade -->
-                 <div class="mb-8">
-                    <h3 class="font-semibold mb-2">Performance Package</h3>
-                    <button class="w-full py-4 bg-gray-200 hover:bg-gray-400 rounded-lg">Performance Upgrade (+$5,500)</button>
-                 </div>
+            <!-- Performance Upgrade -->
+            <div class="mb-8">
+                <h3 class="font-semibold mb-2">Performance Package</h3>
+                <button id="performance-package-button" class="w-full py-4 bg-gray-200 hover:bg-gray-400 rounded-lg">Performance Upgrade (+$5,000)</button>
+            </div>
                 
                 <!-- Accessories Checkboxes -->
-                <div class="my-8">
-                    <h3 class="font-semibold mb-2">Accessories</h3>
-                    <div class="space-y-4">
-                        <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
-                            <span>Center Console Trays</span>
-                            <span class="flex items-center space-x-2">
-                            <input type="checkbox" class="accessory-form-checkbox h-5 w-5"/>
+            <div class="my-8" id="accessory-checkboxes">
+                <h3 class="font-semibold mb-2">Accessories</h3>
+                <div class="space-y-4">
+                    <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
+                        <span>Center Console Trays</span>
+                        <span class="flex items-center space-x-2">
+                            <input type="checkbox" autocomplete="off" class="accessory-form-checkbox h-5 w-5"/>
                             <span>$35</span>
-                        </label>
-                        <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
-                            <span>Sunshade</span>
-                            <span class="flex items-center space-x-2">
-                            <input type="checkbox" class="accessory-form-checkbox h-5 w-5"/>
+                        </span>
+                    </label>
+                    <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
+                        <span>Sunshade</span>
+                        <span class="flex items-center space-x-2">
+                            <input type="checkbox" autocomplete="off" class="accessory-form-checkbox h-5 w-5"/>
                             <span>$105</span>
-                        </label>
-                        <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
-                            <span>All-Weather Interior Liners</span>
-                            <span class="flex items-center space-x-2">
-                            <input type="checkbox" class="accessory-form-checkbox h-5 w-5"/>
+                        </span>
+                    </label>
+                    <label class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
+                        <span>All-Weather Interior Liners</span>
+                        <span class="flex items-center space-x-2">
+                            <input type="checkbox" autocomplete="off" class="accessory-form-checkbox h-5 w-5"/>
                             <span>$225</span>
-                        </label>
-                    </div>
+                        </span>
+                    </label>
                 </div>
+            </div>
 
-                <!-- Total Price Section -->
-                <div class="pt-4">
-                    <h3 class="font-semibold text-lg">Total Price</h3>
-                    <p id="total-price" class="text-2xl font-bold">$52,490</p>
-                </div>
+            <!-- Total Price Section -->
+            <div class="pt-4">
+                <h3 class="font-semibold text-lg">Total Price</h3>
+                <p id="total-price" class="text-2xl font-bold">$52,490</p>
+            </div>
 
-                <!-- Payment Breakdown -->
-                <div class="border-t pt-4 mt-6">
-                    <h3 class="font-semibold text-lg">Estimated Payment Breakdown</h3>
-                    <div class="mt-4">
-                        <p>Down Payment: <span id="down-payment" class="font-bold">$5000</span></p>
-                    </div>
-                    <p>Loan Term: <span class="font-bold">60 Months</span></p>
-                    <p>Interest Rate: <span class="font-bold">3% APR</span></p>
-                    <p>Estimated Monthly Payment: <span id="monthly-payment" class="font-bold text-2xl">$818.65</span></p>
+            <!-- Payment Breakdown -->
+            <div class="border-t pt-4 mt-6">
+                <h3 class="font-semibold text-lg">Estimated Payment Breakdown</h3>
+                <div class="mt-4">
+                    <p>Down Payment: <span id="down-payment" class="font-bold">$5000</span></p>
                 </div>
+                <p>Loan Term: <span id="loan-term" class="font-bold">60 Months</span></p>
+                <p>Interest Rate: <span id="interest-rate" class="font-bold">3% APR</span></p>
+                <p>Estimated Monthly Payment: <span id="monthly-payment" class="font-bold text-2xl">$853.33</span></p>
+            </div>
 
          </aside>
     </main>
